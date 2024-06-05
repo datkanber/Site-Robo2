@@ -1,0 +1,23 @@
+#about {
+    background: linear-gradient(120deg, #f0f4f8, #d9e2ec, #bcccdc);
+    transition: background 1s ease;
+  }
+  
+  img {
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  p, h2, h3, h4 {
+    transition: color 0.3s ease;
+  }
+  
+  p:hover, h2:hover, h3:hover, h4:hover {
+    color: #5a67d8;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+  }
+  

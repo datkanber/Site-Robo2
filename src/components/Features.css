@@ -1,0 +1,10 @@
+#features {
+    background: linear-gradient(120deg, #f0f4f8, #d9e2ec, #bcccdc);
+    transition: background 1s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+  }
+  
