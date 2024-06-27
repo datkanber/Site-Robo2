@@ -1,0 +1,146 @@
+/* Google Fonts'tan Orbitron yazı tipini ekle */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+:root {
+  --primaryColor: #00f2ff;
+  --secondaryColor: #00aaff;
+  --navbarBackground:  linear-gradient(to right, #0909ff, #000000); /* Beyaz ve gümüş tonları */ /* Beyaz ve gümüş tonları */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  font-family: 'Orbitron', sans-serif; /* Only apply Orbitron font to navbar */
+  background: var(--navbarBackground);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(41, 165, 179, 0.1);
+}
+
+.navbar .navbar-container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+}
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .animated-logo {
+  width: 22px; /* Adjust size as needed */
+  height: 1px; /* Adjust size as needed */
+  border-radius: 100%; /* Make the logo circular */
+  border: 7px solid var(--primaryColor); /* Add border */
+  overflow: hidden; /* Ensure the image stays within the circle */
+  background-color: #56a411; /* Background color for better visibility */
+  box-shadow: 0 0 10px var(--primaryColor), 0 0 20px var(--primaryColor), 0 0 20px var(--primaryColor), 0 0 20px var(--primaryColor);
+  animation: spin 0.3s linear infinite, neonGlow 1s infinite alternate, colorCycle 1s infinite;
+  margin-right: 10px; /* Space between logo and brand name */
+}
+
+.navbar .animated-logo img {
+  width: 100%; /* Ensure the image fits within the logo container */
+  height: 100%;
+}
+
+.navbar .brand-name {
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.navbar .brand-dev {
+  color: rgb(255, 119, 0); /* Turuncu renk */
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  margin-left: auto; /* Pushes the menu items to the right */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu-item {
+  margin: 0 17px;
+}
+
+.navbar .menu-link {
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar .menu-link:hover {
+  color: var(--secondaryColor);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: var(--primaryColor);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--navbarBackground);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu-item {
+    margin: 10px 0;
+  }
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes neonGlow {
+  0% { box-shadow: 0 0 5px var(--primaryColor); }
+  100% { box-shadow: 0 0 20px var(--primaryColor); }
+}
+
+@keyframes colorCycle {
+  0% { border-color: var(--primaryColor); }
+  25% { border-color: var(--red); }
+  50% { border-color: var(--green); }
+  75% { border-color: var(--blue); }
+  100% { border-color: var(--yellow); }
+}

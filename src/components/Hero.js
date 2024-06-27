@@ -11,8 +11,8 @@ const Hero = () => {
       <p className="text-2xl mt-4">Data Science, IoT, SAP & Software Development Specialist</p>
       <p className="text-xl mt-2">Passionate about leveraging technology to solve real-world problems</p>
       <div className="mt-6 space-x-4">
-        <a href="#about" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Learn More</a>
-        <a href="#projects" className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">My Projects</a>
+        <a href="#about" className="bg-blue-600 text-white py-2 px-4 rounded">Learn More</a>
+        <a href="#projects" className="bg-blue-600 text-white py-2 px-4 rounded">My Projects</a>
       </div>
       <div className="mt-8 space-y-4">
         <p className="text-lg">
@@ -31,14 +31,14 @@ const Hero = () => {
         </p>
         <div className="mt-4 flex space-x-4">
           <a 
-            href="mailto:burakkanber@example.com" 
-            className="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded"
+            href="mailto:burakkanber@gmail.com" 
+            className="bg-gray-800 text-white py-2 px-4 rounded"
           >
             Email Me
           </a>
           <a 
             href="#contact" 
-            className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded"
+            className="bg-red-600 text-white py-2 px-4 rounded"
           >
             Contact Form
           </a>

@@ -4,7 +4,15 @@ import 'prismjs/themes/prism-okaidia.css'; // Import Darcula-like theme
 import 'prismjs/components/prism-python'; // Import Prism.js language support
 
 const Blog = () => {
-  const [expandedPosts, setExpandedPosts] = useState({});
+  // Başlangıçta tüm gönderiler için expandedPosts true olarak ayarlandı
+  const initialExpandedState = {
+    0: true,
+    1: true,
+    2: true,
+    // Ekstra gönderileriniz varsa onları da buraya ekleyin
+  };
+
+  const [expandedPosts, setExpandedPosts] = useState(initialExpandedState);
 
   useEffect(() => {
     Prism.highlightAll(); // Ensure Prism highlights the code
@@ -51,7 +59,7 @@ predictions = clf.predict(X_test)
     },
     {
       title: "A Beginner's Guide to Neural Networks",
-      excerpt: "Dive into the world of neural networks, understanding their structure, how they learn, and their use in modern AI applications...",
+      excerpt: "Dive into the world of neural networks, understanding their structure, how they learn, and their use in modern AI applications and more...",
       content: `
         <p>Neural networks are a fundamental part of deep learning and are used to solve a variety of complex tasks in AI. Here’s a basic overview:</p>
         <h4>Introduction</h4>
@@ -154,7 +162,7 @@ predictions = model.predict(X)
               <p className="text-gray-700 mb-4">{post.excerpt}</p>
               <button 
                 onClick={() => toggleExpand(index)} 
-                className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-4 inline-block">
+                className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-2 inline-block">
                 {expandedPosts[index] ? 'Show Less' : 'Read More'}
               </button>
               {expandedPosts[index] && (

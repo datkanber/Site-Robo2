@@ -11,7 +11,10 @@ import Weather from './components/Weather';
 import AInews from './components/AInews';
 import KaggleData from './components/KaggleData';
 import GithubTrending from './components/GithubTrending';
-import SapNews from './components/SapNews'; // Ensure this import is correct
+import SapNews from './components/SapNews';
+import LiveStream from './components/LiveStream';
+import Chatbot from './components/Chatbot';
+import CodeEditor from './components/CodeEditor'; // Importing the new component
 
 function App() {
   return (
@@ -26,7 +29,10 @@ function App() {
       <AInews />
       <KaggleData />
       <GithubTrending />
-      <SapNews /> {/* Ensure this component is correctly used */}
+      <SapNews />
+      <LiveStream />
+      <Chatbot />
+      <CodeEditor />
       <Blog />
       <Contact />
     </div>

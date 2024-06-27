@@ -1,12 +1,75 @@
+/* Hero.css */
+
 .hero-section {
-    height: 100vh;
-    background: url('/background.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-  
+  height: 100vh;
+  background: url('/background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-section .buttons a {
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section .buttons a:hover {
+  background-color: #0056b3;
+}
+
+.hero-section .details {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+}
+
+.hero-section .details p {
+  margin-bottom: 0.5rem;
+}
+
+.hero-section .contact {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-section .contact a {
+  background-color: #28a745;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section .contact a:hover {
+  background-color: #218838;
+}

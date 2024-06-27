@@ -38,7 +38,7 @@ const KaggleData = () => {
   return (
     <section id="kaggledata" className="py-20 bg-gray-100">
       <div className="container mx-auto text-center">
-      <h2 className="text-4xl font-bold mb-6 text-blue-600">Latest Kaggle Competitions and Datasets</h2>
+      <h2 className="text-4xl font-bold mb-6 text-blue-600">Kaggle</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h3 className="text-2xl font-bold mb-4 text-gray-800">Competitions</h3>

@@ -103,9 +103,7 @@ const Contact = () => {
           {status && <p className={`mt-4 ${statusClass}`}>{status}</p>}
         </form>
         <div className="mt-8 space-x-4">
-          <a href="https://linkedin.com/in/burakkanber" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>
-          <a href="https://github.com/burakkanber" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">GitHub</a>
-          <a href="https://twitter.com/burakkanber" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Twitter</a>
+          <a href="https://github.com/datkanber" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">GitHub</a>
         </div>
       </div>
     </section>

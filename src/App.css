@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+/* Genel padding düzenlemesi ile tüm bölümler için başlık hizalaması */
+section {
+  padding-top: 80px; /* Navbar yüksekliği kadar boşluk ekliyoruz */
+}
