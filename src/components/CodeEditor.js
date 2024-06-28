@@ -57,7 +57,7 @@ function CodeEditor() {
   };
 
   return (
-    <section id="coding" className="">
+    <section id="coding" className="py-20" style={{ backgroundImage: 'linear-gradient(120deg, #0084f0a1, #d9e2ec, #548cc4)' }}>
       <div className="container1 mx-auto text-center">
         <h2 className="text-4xl font-bold text-blue-600">Code Editor</h2>
         <div className="code-editor-header">

@@ -35,12 +35,12 @@ const SapNews = () => {
   }
 
   return (
-    <section id="sapnews" className="py-20 bg-gray-100">
-      <div className="container mx-auto text-center">
+    <section id="sapnews" className="py-20" style={{ backgroundImage: 'linear-gradient(120deg, #0084f0a1, #d9e2ec, #548cc4)' }}>
+      <div className="container mx-auto text-center pb-10">
         <h2 className="text-4xl font-bold mb-6 text-blue-600">Latest SAP News</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {articles.slice(0, 4).map((article, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">
+            <div key={index} className="bg-white p-10 rounded-lg shadow-md mb-2 border border-gray-200">
               <h4 className="text-xl font-bold text-black mb-2">{article.title}</h4>
               <p className="text-md text-black mb-4" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.description) }}></p>
               <a href={article.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Read More</a>

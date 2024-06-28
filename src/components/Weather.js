@@ -102,8 +102,8 @@ const Weather = () => {
   const advice = temperature ? getClothingAdvice(temperature) : null;
 
   return (
-    <section id="weather" className="py-20 bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300">
-      <div className="container mx-auto text-center">
+    <section id="weather" className="py-20" style={{ backgroundImage: 'linear-gradient(120deg, #0084f0a1, #d9e2ec, #548cc4)' }}>
+      <div className="container mx-auto text-center pb-10">
         <h2 className="text-4xl font-bold mb-6 text-blue-600">Current Weather</h2>
         <div className="mb-4">
           <label htmlFor="city" className="block text-lg font-bold mb-2">

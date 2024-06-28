@@ -87,12 +87,12 @@ const AInews = () => {
   }
 
   return (
-    <section id="ainews" className="py-20 bg-gray-100">
-      <div className="container mx-auto text-center">
+    <section id="ainews" className="py-20" style={{ backgroundImage: 'linear-gradient(120deg, #0084f0a1, #d9e2ec, #548cc4)' }}>
+      <div className="container mx-auto text-center pb-10">
       <h2 className="text-4xl font-bold mb-6 text-blue-600">Latest AI News</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {articles.map((article, index) => (
-            <div key={index} className="bg-white p-4 rounded shadow-md">
+            <div key={index} className="bg-white p-20 rounded shadow-md">
               {article.imageUrl && (
                 <img src={article.imageUrl} alt={article.title} className="mb-4 w-full h-48 object-cover rounded" />
               )}

@@ -21,7 +21,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    background: rgb(0, 0, 10); /* Ensure section has background */
     margin-top: 0px; /* Increase space between navbar and section */
   }
   

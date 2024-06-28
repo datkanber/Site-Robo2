@@ -57,7 +57,7 @@ const Navbar = () => {
         <ul className={`menu ${isOpen ? 'open' : ''}`} ref={menuRef}>
           {MenuItems.map((item) => (
             <li key={item.href} className="menu-item">
-              <a href={item.href} className="menu-link">{item.label}</a>
+              <a href={item.href} className="menu-link" onClick={() => setIsOpen(false)}>{item.label}</a>
             </li>
           ))}
         </ul>
