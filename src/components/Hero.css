@@ -1,75 +1,132 @@
 /* Hero.css */
 
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
 .hero-section {
-  height: 100vh;
-  background: url('/background.jpeg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-top: 80px; /* Navbar ile çakışmayı önlemek için padding ekleyin */
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Ortalamak için */
   text-align: center;
-  color: rgb(255, 255, 255);
-  padding: 20px;
 }
 
-.hero-section h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  margin-bottom: 0.5rem;
+h1, p {
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
-.hero-section p {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+.animate-fade-in {
+  animation-name: fadeIn;
 }
 
-.hero-section .buttons {
+.animate-slide-up {
+  animation-name: slideUp;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.projects-container {
   display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+  flex-direction: column; /* Mobil görünüm için dikey hizalama */
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.hero-section .buttons a {
-  background-color: #007BFF;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.375rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+@media (min-width: 768px) {
+  .projects-container {
+    flex-direction: row; /* Geniş ekranlar için yatay hizalama */
+    align-items: flex-start;
+  }
 }
 
-.hero-section .buttons a:hover {
-  background-color: #0056b3;
-}
-
-.hero-section .details {
-  margin-top: 3rem;
-  font-size: 1.1rem;
-}
-
-.hero-section .details p {
-  margin-bottom: 0.5rem;
-}
-
-.hero-section .contact {
-  margin-top: 3rem;
+.projects-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Butonları sola hizalayın */
 }
 
-.hero-section .contact a {
-  background-color: #28a745;
-  color: #ffffff;
+.project-btn {
+  background-color: #333;
+  color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
-  text-decoration: none;
-  margin-top: 0.5rem;
-  transition: background-color 0.3s ease;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 300px; /* Butonları genişletin */
+  text-align: left; /* Buton içeriğini sola hizalayın */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge ekleyin */
 }
 
-.hero-section .contact a:hover {
-  background-color: #218838;
+.project-btn.active, .project-btn:hover {
+  background-color: #007BFF;
+  transform: translateY(-2px);
+}
+
+.video-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+@media (max-width: 767px) {
+  .video-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #bdbdbd;
+  margin-top: 1rem;
+}
+
+.carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel .legend {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel .carousel-item {
+  position: relative;
+}
+
+.carousel .carousel-item video {
+  max-height: 400px;
+  object-fit: cover;
 }

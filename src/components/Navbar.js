@@ -4,18 +4,18 @@ import ReactLogo from './ReactLogo';
 
 const MenuItems = [
   { href: '#home', label: 'Home' },
-  { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
+  { href: '#about', label: 'About' },
   { href: '#blog', label: 'Blog' },
-  { href: '#contact', label: 'Contact' },
-  { href: '#exchange-rates', label: 'Rates' },
-  { href: '#weather', label: 'Weather' },
   { href: '#ainews', label: 'AI' },
-  { href: '#kaggledata', label: 'Kaggle' },
   { href: '#sapnews', label: 'SAP' },
-  { href: '#github-trending', label: 'GitHub' },
-  { href: '#livestream', label: 'Stream' },
   { href: '#coding', label: 'Coding' },
+  { href: '#weather', label: 'Weather' },
+  { href: '#exchange-rates', label: 'Rates' },
+  { href: '#livestream', label: 'Stream' },
+  { href: '#kaggledata', label: 'Kaggle' },
+  { href: '#github-trending', label: 'GitHub' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 const Navbar = () => {

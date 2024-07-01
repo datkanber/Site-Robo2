@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { FaArrowDown } from 'react-icons/fa';
-import { BsFillChatDotsFill } from 'react-icons/bs'; // Yeni ikon
+import { BsFillChatDotsFill } from 'react-icons/bs';
 import './Chatbot.css';
 
 const Chatbot = () => {
@@ -96,9 +96,8 @@ const Chatbot = () => {
       </div>
       {isHidden && (
         <div className="chatbot-toggle-icon" onClick={toggleChatbot}>
-          <BsFillChatDotsFill size={40} />
+          <BsFillChatDotsFill size={30} />
           <span className="chatbot-icon-text">CHATBOT</span>
-          <span className="chatbot-icon-text">chat me</span>
         </div>
       )}
     </>
