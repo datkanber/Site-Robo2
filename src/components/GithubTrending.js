@@ -34,7 +34,7 @@ const GithubTrending = () => {
   return (
     <section id="github-trending" className="py-20 bg-gradient-to-r from-blue-600 via-blue-50 to-blue-800">
       <div className="container pb-12 mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12 text-blue-600">Trending GitHub Repositories</h2>
+        <h2 className="text-4xl font-bold mb-12 text-blue-500">Trending GitHub Repositories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {repos.map((repo) => (
             <div key={repo.id} className="bg-white p-6 rounded shadow-md flex flex-col">

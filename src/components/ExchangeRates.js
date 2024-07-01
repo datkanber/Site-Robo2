@@ -78,7 +78,7 @@ const ExchangeRates = () => {
   return (
     <section id="exchange-rates" className="py-20" style={{ backgroundImage: 'linear-gradient(120deg, #0084f0a1, #d9e2ec, #548cc4)' }}>
       <div className="container mx-auto text-center pb-10">
-        <h2 className="text-4xl font-bold mb-12 text-blue-600">Daily Exchange Rates</h2>
+        <h2 className="text-4xl font-bold mb-12 text-blue-500">Daily Exchange Rates</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {popularRates.map((item) => (
             <div key={item.name} className="bg-gray-100 p-12 rounded shadow-md flex flex-col justify-between items-center">

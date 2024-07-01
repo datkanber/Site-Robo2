@@ -4,10 +4,18 @@ import 'prismjs/themes/prism-okaidia.css'; // Import Darcula-like theme
 import 'prismjs/components/prism-python'; // Import Prism.js language support
 
 const Blog = () => {
-  const [expandedPosts, setExpandedPosts] = useState({});
+  // Başlangıçta tüm gönderiler için expandedPosts true olarak ayarlandı
+  const initialExpandedState = {
+    0: true,
+    1: true,
+    2: true,
+    // Ekstra gönderileriniz varsa onları da buraya ekleyin
+  };
+
+  const [expandedPosts, setExpandedPosts] = useState(initialExpandedState);
 
   useEffect(() => {
-    Prism.highlightAll();
+    Prism.highlightAll(); // Ensure Prism highlights the code
   }, [expandedPosts]);
 
   const blogPosts = [
@@ -143,23 +151,23 @@ predictions = model.predict(X)
   };
 
   return (
-    <section id="blog" className="py-20" style={{ backgroundImage: 'linear-gradient(120deg, #0084f0a1, #d9e2ec, #548cc4)' }}>
+    <section id="blog" className="py-20 bg-gray-100">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold text-blue-600 mb-6">Blog</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col h-full">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               <img src={post.image} alt={post.title} className="w-full h-40 object-cover rounded mb-4" />
               <h3 className="text-2xl font-bold mb-2 text-blue-700">{post.title}</h3>
-              <p className="text-gray-700 mb-4 flex-grow">{post.excerpt}</p>
+              <p className="text-gray-700 mb-4">{post.excerpt}</p>
               <button 
                 onClick={() => toggleExpand(index)} 
                 className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-2 inline-block">
                 {expandedPosts[index] ? 'Show Less' : 'Read More'}
               </button>
               {expandedPosts[index] && (
-                <div className="mt-4 text-left text-sm flex-grow">
-                  <div className="bg-gray-900 text-white p-4 rounded flex-grow">
+                <div className="mt-4 text-left text-sm">
+                  <div className="bg-gray-900 text-white p-4 rounded">
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                   </div>
                 </div>

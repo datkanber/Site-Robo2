@@ -57,9 +57,9 @@ function CodeEditor() {
   };
 
   return (
-    <section id="coding" className="py-20" style={{ backgroundImage: 'linear-gradient(120deg, #0084f0a1, #d9e2ec, #548cc4)' }}>
-      <div className="container1 mx-auto text-center">
-        <h2 className="text-4xl font-bold text-blue-600">Code Editor</h2>
+    <section id="coding" className="code-editor-section">
+      <div className="container1">
+        <h2 className="section-title pt-20">Code Editor</h2>
         <div className="code-editor-header">
           <select onChange={(e) => setLanguage(e.target.value)} value={language}>
             <option value="javascript">JavaScript</option>
@@ -70,7 +70,7 @@ function CodeEditor() {
         </div>
         <div className="editor-container">
           <Editor
-            height="60vh"
+            height="50vh"
             language={language}
             value={code}
             theme="vs-dark"

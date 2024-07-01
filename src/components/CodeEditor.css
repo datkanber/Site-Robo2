@@ -1,108 +1,92 @@
-/* CodeEditor.css */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .container1 {
-    max-width: 1001px;
-    padding: 90px;
-  }
-  
-  /* Section Styles */
-  .section-divider {
-    border-top: 0px solid #ccc;
-    margin: 20px 0;
-  }
-  
-  #coding {
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    margin-top: 0px; /* Increase space between navbar and section */
-  }
-  
-  /* Header Styles */
-  .code-editor-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .code-editor-header select {
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-  }
-  
-  .code-editor-header button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .code-editor-header button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Editor Container Styles */
-  .editor-container {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Output Container Styles */
-  .output-container {
-    background-color: #3b72de;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 4px;
-    overflow: auto;
-    max-height: 200px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .output-container pre {
-    margin: 0;
-    font-size: 14px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  
-  .bg-gray-100 {
-    background-color: #f7fafc;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-  
-  .font-bold {
-    font-weight: 700;
-  }
-  
-  .mb-6 {
-    margin-bottom: 1.5rem;
-  }
-  
-  .text-blue-600 {
-    color: #3182ce;
-  }
-  
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.container1 {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.code-editor-section {
+  padding: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(120deg, #0084f0a1, #d9e2ec, #548cc4);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #61dafb;
+}
+
+/* Header Styles */
+.code-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.code-editor-header select, .code-editor-header button {
+  margin: 5px;
+}
+
+.code-editor-header select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.code-editor-header button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.code-editor-header button:hover {
+  background-color: #45a049;
+}
+
+/* Editor Container Styles */
+.editor-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 50vh;
+}
+
+/* Output Container Styles */
+.output-container {
+  background-color: #333;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 4px;
+  overflow: auto;
+  max-height: 170px;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.output-container pre {
+  margin: 0;
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

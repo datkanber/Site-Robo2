@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Navbar.css'; // Ensure your CSS file is imported
+import './Navbar.css';
+import ReactLogo from './ReactLogo'; 
 
 const MenuItems = [
   { href: '#home', label: 'Home' },
@@ -20,13 +21,18 @@ const MenuItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef();
+  const menuToggleRef = useRef();
 
-  const toggleMenu = () => {
+  const toggleMenu = (event) => {
     setIsOpen(!isOpen);
+    event.stopPropagation();
   };
 
   const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (
+      menuRef.current && !menuRef.current.contains(event.target) &&
+      menuToggleRef.current && !menuToggleRef.current.contains(event.target)
+    ) {
       setIsOpen(false);
     }
   };
@@ -43,13 +49,13 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="brand">
           <div className="animated-logo">
-            <img src="/logo.png" alt="burakkanber logo" />
+            <ReactLogo />
           </div>
           <a href="#home" className="brand-name">
             burakkanber<span className="brand-dev">.dev</span>
           </a>
         </div>
-        <div className="menu-toggle" id="mobile-menu" onClick={toggleMenu}>
+        <div className="menu-toggle" id="mobile-menu" onClick={toggleMenu} ref={menuToggleRef}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>

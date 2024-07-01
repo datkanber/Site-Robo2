@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="h-screen flex flex-col justify-center items-center text-center text-black"
+      className="h-screen flex flex-col justify-center items-center text-center text-[#CACACA]"
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/background.jpeg)`,
         backgroundSize: 'cover',
@@ -14,8 +14,8 @@ const Hero = () => {
         transform: 'scale(1.0)', // Hafifçe büyüterek daha iyi görünüm elde edebiliriz
       }}
     >
-      <h1 className="text-6xl font-bold">Data Science</h1>
-      <p className="text-2xl mt-4">Data Science, IoT, SAP & Software Development Specialist</p>
+      <h1 className="text-5xl">Data Science</h1>
+      <p className="text-xl mt-4">Data Science, IoT, SAP & Software Development Specialist</p>
       <p className="text-xl mt-2">Passionate about leveraging technology to solve real-world problems</p>
       <div className="mt-6 space-x-4">
         <a href="#about" className="bg-blue-700 text-white py-2 px-4 rounded">Learn More</a>
