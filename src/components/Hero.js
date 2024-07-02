@@ -4,7 +4,7 @@ import './Hero.css';
 const projects = [
   {
     name: "Project 1: POS Application with React JSX",
-    video: `${process.env.PUBLIC_URL}/POSAPP.mp4`,
+    video: `${process.env.PUBLIC_URL}/iposs.mp4`,
     description: "This project demonstrates a POS system built with React JSX. It includes features such as user authentication, transaction management, and reporting."
   },
   {

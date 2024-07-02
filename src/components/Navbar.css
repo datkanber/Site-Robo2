@@ -114,6 +114,43 @@ body {
   transition: 0.3s;
 }
 
+.music-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 50px; /* Mobil görünüm için */
+  animation: blink 1s infinite; /* Yanıp sönme animasyonu */
+}
+
+.music-icon, .music-label {
+  color: var(--primaryColor);
+}
+
+.music-icon {
+  font-size: 0.9rem;
+}
+
+.music-container:hover .music-icon, .music-container:hover .music-label {
+  color: var(--secondaryColor);
+}
+
+.music-label {
+  font-size: 0.7rem;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media (min-width: 768px) {
+  .music-container {
+    margin-left: 0; /* Masaüstü görünüm için */
+  }
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;

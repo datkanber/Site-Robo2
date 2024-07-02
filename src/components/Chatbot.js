@@ -95,7 +95,7 @@ const Chatbot = () => {
         </form>
       </div>
       {isHidden && (
-        <div className="chatbot-toggle-icon" onClick={toggleChatbot}>
+        <div className="chatbot-toggle-icon pl-9 pt-2" onClick={toggleChatbot}>
           <BsFillChatDotsFill size={30} />
           <span className="chatbot-icon-text">CHATBOT</span>
         </div>

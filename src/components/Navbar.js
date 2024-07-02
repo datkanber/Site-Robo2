@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { FaMusic } from 'react-icons/fa';
 import './Navbar.css';
 import ReactLogo from './ReactLogo'; 
 
@@ -20,8 +21,10 @@ const MenuItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const menuRef = useRef();
   const menuToggleRef = useRef();
+  const audioRef = useRef(new Audio('/music.mp3')); // Müzik dosyasının yolunu belirtin
 
   const toggleMenu = (event) => {
     setIsOpen(!isOpen);
@@ -37,10 +40,21 @@ const Navbar = () => {
     }
   };
 
+  const toggleMusic = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   useEffect(() => {
+    const audio = audioRef.current; // Referansı bir değişkene kopyalayın
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      audio.pause(); // Cleanup fonksiyonunda değişkeni kullanın
     };
   }, []);
 
@@ -55,7 +69,11 @@ const Navbar = () => {
             burakkanber<span className="brand-dev">.dev</span>
           </a>
         </div>
-        <div className="menu-toggle" id="mobile-menu" onClick={toggleMenu} ref={menuToggleRef}>
+        <div className="music-container pt-1" onClick={toggleMusic}>
+          <FaMusic className="music-icon" />
+          <div className="music-label">live music</div>
+        </div>
+        <div className="menu-toggle pr-4" id="mobile-menu" onClick={toggleMenu} ref={menuToggleRef}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
