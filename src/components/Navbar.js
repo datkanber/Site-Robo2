@@ -66,13 +66,10 @@ const Navbar = () => {
             <ReactLogo />
           </div>
           <a href="#home" className="brand-name">
-            burakkanber<span className="brand-dev">.dev</span>
+            burakkanber<span className="brand-dev pr-7">.dev</span>
           </a>
         </div>
-        <div className="music-container pt-1" onClick={toggleMusic}>
-          <FaMusic className="music-icon" />
-          <div className="music-label">live music</div>
-        </div>
+        <FaMusic className="music-icon" onClick={toggleMusic} />
         <div className="menu-toggle pr-4" id="mobile-menu" onClick={toggleMenu} ref={menuToggleRef}>
           <span className="bar"></span>
           <span className="bar"></span>
