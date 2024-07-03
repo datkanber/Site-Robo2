@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+  --primaryColor: #CACACA;
+  --secondaryColor: #6175FB;
+  --fontFamily: 'Montserrat', sans-serif;
+  --navbarBackground: #010409;
+  --navbarBorderColor: #e8dcd85f; /* Navbar alt çizgi rengi */
+}
+
+body {
+  font-family: var(--fontFamily);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  font-family: var(--fontFamily);
+  background: var(--navbarBackground);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Explicit height */
+  z-index: 1000;
+}
+
+.navbar::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--navbarBorderColor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  height: 100%; /* Ensure it takes the full height of the navbar */
+}
+
+.navbar .animated-logo {
+  width: 90px; /* Adjusted size */
+  height: 90px; /* Adjusted size */
+  margin-right: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the image inside the logo container */
+}
+
+.navbar .brand-name {
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  line-height: 1; /* Ensure text is vertically centered */
+}
+
+.navbar .brand-dev {
+  color: #6175fb;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1; /* Ensure text is vertically centered */
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex; /* Flex display for desktop */
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Center menu items */
+  height: 100%; /* Center menu items */
+}
+
+.navbar .menu-item {
+  margin: 0 25px;
+}
+
+.navbar .menu-link {
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 2; /* Center menu items */
+}
+
+.navbar .menu-link:hover {
+  color: var(--secondaryColor);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: var(--primaryColor);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.music-icon {
+  color: var(--primaryColor);
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 50px; /* Mobil görünüm için */
+  animation: blink 1s infinite; /* Yanıp sönme animasyonu */
+}
+
+.music-icon:hover {
+  color: var(--secondaryColor);
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media (min-width: 768px) {
+  .music-icon {
+    margin-left: 0; /* Masaüstü görünüm için */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar .menu {
+    display: none; /* Hide */
+    flex-direction: column;
+    align-items: center; /* Center menu items */
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--navbarBackground);
+    z-index: 9999; /* Ensure the menu is on top of other elements */
+    overflow-y: visible; /* Ensure no vertical overflow */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    max-height: calc(100vh - 60px); /* Ensure full height visibility */
+  }
+
+  .navbar .menu.open {
+    display: flex;
+  }
+
+  .navbar .menu-item {
+    margin: 10px 0;
+  }
+
+  .navbar .menu-link {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}

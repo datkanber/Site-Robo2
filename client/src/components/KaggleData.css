@@ -1,0 +1,28 @@
+.my-kaggle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #4482F6;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid > div {
+    flex: 1;
+    min-width: 300px; /* Adjust this value based on your design */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-content {
+    flex-grow: 1;
+}

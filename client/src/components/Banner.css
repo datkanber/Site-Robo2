@@ -1,0 +1,32 @@
+.banner {
+  background-color: #56749F;
+  color: #ffffff;
+  padding: 15px 0; /* Üst ve alt boşluk eklendi */
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid #e8dcd85f;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 90s linear infinite; /* Süreyi verilerin uzunluğuna göre ayarlayın */
+  padding-left: 100%; /* Soldan başlamak için boşluk eklendi */
+}
+
+.scrolling-text span {
+  display: inline-block;
+  font-weight: normal; /* Yazı tipi kalın olmasın */
+  margin-right: 50px;
+  font-size: 0.9rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
